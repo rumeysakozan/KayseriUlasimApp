@@ -1,0 +1,15 @@
+@model Card
+<div class="row">
+    <div class="col-md-3">
+        <img src="~/img/@Model.Image" alt="">
+    </div>
+    <div class="col-md-7">
+        <div class="card-body">
+            <a asp-controller="Register" asp-action="Index" asp-route-id="@Model.Id">
+                <h2 class="card-title">@Model.Title</h2>
+            </a>
+            <p class="card-text">@Model.Description</p>
+
+        </div>
+    </div>
+</div>

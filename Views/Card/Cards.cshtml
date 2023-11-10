@@ -1,0 +1,9 @@
+@model List<Card>
+    @section Header{
+    @await Html.PartialAsync("_HeaderCard")
+    }
+    <div class="container mt-5">
+        @foreach(var kart in Model){
+        @await Html.PartialAsync("_Cards",kart)
+        }
+    </div>
